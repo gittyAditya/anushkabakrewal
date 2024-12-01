@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../page.module.css";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
@@ -5,88 +6,18 @@ import Contact from "@/components/Contact";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { projectData } from "@/constants/projectData";
 
-type Project = {
-  title: string;
-  sources: string[];
-};
+export async function generateStaticParams() {
+  return Object.keys(projectData).map((id) => ({ id }));
+}
 
-const projectData: Record<string, Project> = {
-  first: {
-    title: "Resilience",
-    sources: [
-      "page1",
-      "page2",
-      "page3",
-      "page4",
-      "page5",
-      "page6",
-      "page7",
-      "page8",
-      "page9",
-    ],
-  },
-  second: {
-    title: "Rebellious Threads",
-    sources: ["page1", "page2", "page3", "page4", "page5", "page6"],
-  },
-  third: {
-    title: "Rugged Frontier",
-    sources: [
-      "page1",
-      "page2",
-      "page3",
-      "page4",
-      "page5",
-      "page6",
-      "page7",
-      "page8",
-    ],
-  },
-  fourth: {
-    title: "Whispering Light",
-    sources: [
-      "page1",
-      "page2",
-      "page3",
-      "page4",
-      "page5",
-      "page6",
-      "page7",
-      "page8",
-    ],
-  },
-  fifth: {
-    title: "Imperial Weaves & Rajwada",
-    sources: [
-      "page1",
-      "page2",
-      "page3",
-      "page4",
-      "page5",
-      "page6",
-      "page7",
-      "page8",
-      "page9",
-    ],
-  },
-  sixth: {
-    title: "Imperial Weaves & Rajwada",
-    sources: [
-      "page1",
-      "page2",
-      "page3",
-      "page4",
-      "page5",
-      "page6",
-      "page7",
-      "page8",
-    ],
-  },
-};
-
-const ProjectPage = ({ params }: { params: { id: string } }) => {
-  const { id } = params;
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
 
   // Fetch the project data using the id
   const project = projectData[id];
@@ -101,7 +32,7 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
       <Navbar />
       <div className={styles.projectContent}>
         <div className={styles.pageHeader}>
-          <Link href="/#projects">
+          <Link href="/#projects" className={styles.backLink}>
             <FontAwesomeIcon icon={faArrowLeft} width={36} height={36} />
           </Link>
           <div className={styles.projectTitle}>{projectData[id].title}</div>
@@ -124,6 +55,4 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
       <Contact />
     </div>
   );
-};
-
-export default ProjectPage;
+}

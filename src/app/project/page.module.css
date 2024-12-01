@@ -20,3 +20,6 @@
     border-bottom: 2px solid #FFF;
     padding: 40px 0;
 }
+.backLink:hover {
+    color: #DBC221;
+}
