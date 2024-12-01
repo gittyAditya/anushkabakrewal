@@ -1,0 +1,27 @@
+.projects {
+    background-color: #343333;
+    padding: 80px 120px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.title {
+    font-size: 24px;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.card {
+    position: relative;
+}
+.projectImg {
+    transition: transform 0.2s ease, filter 0.2s ease; /* Smooth transition for transform and filter */
+}
+.projectImg:hover {
+    transform: scale(1.05); /* Scale up the card */
+    filter: blur(2px); /* Apply blur to the image */
+}

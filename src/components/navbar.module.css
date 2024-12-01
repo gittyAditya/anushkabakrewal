@@ -1,0 +1,63 @@
+.navbar {
+    background-color: #343333;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: fixed;
+    z-index: 2;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+.name {
+    font-size: 32px;
+    color: #DBC221;
+}
+.navItems {
+    font-size: 24px;
+    display: flex;
+    gap: 40px;
+}
+
+/* Common navbar styles */
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    color: #FFF; /* Default color */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition for scale and color */
+}
+
+/* Add underline animation to nav items */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #DBC221; /* Color of the underline */
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%; /* Underline spans the full width */
+}
+
+.navbar .name a {
+    color: inherit; /* Use inherited color */
+    font-size: inherit; /* Use inherited font size */
+    transition: none; /* Disable transition */
+    text-decoration: none; /* Ensure no underline is applied */
+}
+
+.navbar .name a:hover {
+    color: inherit; /* Keep the same color on hover */
+    transform: none; /* No scaling effect on hover */
+}
+
+.navbar .name a::after {
+    content: none; /* Remove the underline for the 'name' */
+}
+
+

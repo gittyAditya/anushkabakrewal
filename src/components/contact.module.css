@@ -1,0 +1,27 @@
+.contact {
+    background-color: #2E2C2C;
+    padding: 70px 120px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title {
+    font-size: 80px;
+    color: #DBC221;
+}
+.social {
+    display: flex;
+    gap: 40px;
+}
+.social a {
+    color: inherit;
+    display: inline-block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.social a:hover {
+    transform: scale(1.1)
+}
+
+

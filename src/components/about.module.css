@@ -1,0 +1,53 @@
+.about {
+    position: relative;
+    background-color: #2E2C2C;
+    padding: 40px 120px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title {
+    font-size: 128px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.description {
+    display: flex;
+    gap: 40px;
+    border-top: solid white 2px;
+    border-bottom: solid white 2px;
+    padding: 40px 0;
+    padding-left: 20px;
+    width: 100%;
+}
+.aboutText {
+    width: 65%;
+    border-right: solid white 2px;
+    padding-right: 20px;
+}
+.heading {
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+.text {
+    font-size: 20px;
+}
+.workflow {
+    width: 100%;
+    align-self: flex-start;
+    padding: 40px 0;
+}
+.diagram {
+    margin: 100px 60px;
+}
+.skills {
+    width: 30%;
+}
+.skillIcons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
