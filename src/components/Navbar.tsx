@@ -1,5 +1,7 @@
 import styles from "./navbar.module.css";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   return (
@@ -10,13 +12,27 @@ const Navbar = () => {
         </div>
         <div className={styles.navItems}>
           <div>
-            <Link href="/#about">About</Link>
+            <Link href="/#about" className={styles.navItem}>
+              About
+            </Link>
           </div>
           <div>
-            <Link href="/#projects">My Work</Link>
+            <Link href="/#projects" className={styles.navItem}>
+              My Work
+            </Link>
           </div>
           <div>
-            <Link href="/#contact">Get In Touch</Link>
+            <Link href="/#contact" className={styles.navItem}>
+              Get In Touch
+            </Link>
+          </div>
+          <div>
+            <Link href="/anushka-bakrewal-resume.pdf">
+              <div className={styles.downloadBtn}>
+                <FontAwesomeIcon icon={faDownload} width={20} height={15} />{" "}
+                Resume
+              </div>
+            </Link>
           </div>
         </div>
       </div>

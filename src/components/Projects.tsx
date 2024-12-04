@@ -9,7 +9,7 @@ const Projects = () => {
     { id: "third", image: "/third.png" },
     { id: "fourth", image: "/fourth.png" },
     { id: "fifth", image: "/fifth.png" },
-    { id: "sixth", image: "/fifth.png" },
+    { id: "sixth", image: "/sixth.png" },
   ];
 
   return (

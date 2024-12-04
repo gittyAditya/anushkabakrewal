@@ -28,7 +28,7 @@ const Contact = () => {
           </Link>
           <Link
             className={styles.mail}
-            href="mailto:anushkabakrewal@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=anushkabakrewal@gmail.com"
             rel="noopener noreferrer"
             target="_blank"
           >

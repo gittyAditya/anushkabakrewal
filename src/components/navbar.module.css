@@ -9,26 +9,25 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
+    align-items: center;
 }
 .name {
     font-size: 32px;
     color: #DBC221;
 }
 .navItems {
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     gap: 40px;
 }
 
-/* Common navbar styles */
 .navbar a {
     position: relative;
     text-decoration: none;
-    color: #FFF; /* Default color */
-    transition: transform 0.3s ease, color 0.3s ease; /* Transition for scale and color */
+    color: #FFF;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Add underline animation to nav items */
 .navbar a::after {
     content: "";
     position: absolute;
@@ -36,28 +35,31 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #DBC221; /* Color of the underline */
+    background-color: #DBC221;
     transition: width 0.3s ease;
 }
 
 .navbar a:hover::after {
-    width: 100%; /* Underline spans the full width */
+    width: 100%;
 }
 
 .navbar .name a {
-    color: inherit; /* Use inherited color */
-    font-size: inherit; /* Use inherited font size */
-    transition: none; /* Disable transition */
-    text-decoration: none; /* Ensure no underline is applied */
+    color: inherit;
+    font-size: inherit;
+    transition: none;
+    text-decoration: none;
 }
 
 .navbar .name a:hover {
-    color: inherit; /* Keep the same color on hover */
-    transform: none; /* No scaling effect on hover */
+    color: inherit;
+    transform: none;
 }
 
 .navbar .name a::after {
-    content: none; /* Remove the underline for the 'name' */
+    content: none;
+}
+.downloadBtn {
+    font-size: 20px;
 }
 
 
