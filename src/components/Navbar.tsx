@@ -27,7 +27,11 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <Link href="/anushka-bakrewal-resume.pdf">
+            <Link
+              href="/anushka-bakrewal-resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className={styles.downloadBtn}>
                 <FontAwesomeIcon icon={faDownload} width={20} height={15} />{" "}
                 Resume
